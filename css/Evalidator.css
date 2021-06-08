@@ -1,21 +1,22 @@
 body, html {
-	margin:  0px;
+	margin: auto;
 	padding: 0px;
 	background-color: white;
 	font-family: "Avenir Next";
 }
 
 .container {
-	width: 99%;
-	min-width: 500px;
+	max-width: 100%;
+	min-width: 600px;
 	margin: auto;
+
 }
 
 header {
 	width: 100%;
 	height: 100px;
 	line-height: normal;
-	background color: #267030;
+	background-color: #267030;
 }
 
 	header span {
@@ -25,15 +26,54 @@ header {
 	}
 
 .steps {
-	width: 100%;
+	max-width: 100%;
 	height: 75px;
-	background-color: white;
+	background-color: #faf8df;
+	border-bottom: 1px solid black;
 }
 
 footer {
 	width: 100%;
 	height: 75px;
 	background-color: #267030;
+}
+
+.step1 {
+	width: 33%;
+	float: left;
+	height: 500px;
+	border-right:  1px solid black;
 
 }
 
+.step2 {
+	width: 33%;
+	float: left;
+	height: 500px;
+	border-right:  1px solid black;
+}
+
+.step3 {
+	width: 33%;
+	float: left;
+	height: 500px;
+}
+
+.outputanddoc {
+	width: 100%;
+	height: 750px;
+	background-color: white;
+}
+
+.documentation {
+	width: 20%;
+	float:  left;
+	height: 750px;
+	border-right: 1px solid black;
+}
+
+.outputbox {
+	width: 79%;
+	float: right;
+	height: 750px;
+}
