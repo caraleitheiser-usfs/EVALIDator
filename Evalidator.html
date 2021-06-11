@@ -2,62 +2,119 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>EVALIDator</title>
-		<link rel="stylesheet" href="css/Evalidator.css" />
+		<meta name="description" content="FIA EVALIDator">
+		<meta name="keywords" content="EVALIDator, FIA, USFS">
+		<meta name="author" content="Cara Leitheiser">
 		<meta name="viewport" content="width=device-width"/>
-		
+		<link rel="stylesheet" href="css/Evalidator.css"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+		<title>EVALIDator</title>
 	</head>
 
 	<body>
 
-		<!-- Header -->
-		<div class="container">
-			<header>
-				<span>USFS EVALIDator</span>
-			</header>
+		<div class="header">
+			<img id="USFSLogo" src="https://usfs.maps.arcgis.com/sharing/rest/content/items/78444d68d02f4e07a8a30d9697455028/data" alt="USFS Logo"/>
+			<h1 id="headertitle">USFS EVALIDator</h1>
+		</div>
 
-			<!--Section to choose options-->
-			<div class="steps">
+		<div class="choicescontainer"><!--Section to choose options-->
 
-				<div class="step1">
-					Step 1: Retrieval Type
+			<div class="section" id="step1">
+
+				<h2 id="titlestep1">Step 1: Retrieval Type</h2>
+
+				<div class="statechoice">
+					<p id="statetext">Choose state/s</p>
+					<form>
+						<select class="formcontrol" id="statelist" name="statelist" onclick="getState() "></select>
+					</form>
+				</div>
+				
+				<div class="timeframe">
+					<p id="timeframetext">Inventory Time Frame</p>
+					<form id="timeframeform">
+						<input type="radio" id="limit">
+						<label for="limit">Limit</label><br>
+						<input type="radio" id="alltime" >
+						<label for="alltime">All</label>
+					</form>
 				</div>
 
-				<div class="step2">
-					Step 2: Estimate Type
+				<div class="geographicalchoice">
+					<p id="geographies">Available Geographies</p>
+					<div class="geographicallist">
+					</div>
 				</div>
-
-				<div class="step3">
-					Step 3: Table Variables
+				
+				<div class="circlerequest">
+					<p id="circletitle">Enter coordinates and radius for a circle request</p>
+					<form id="circleform">
+						<input type="text" placeholder="Latitude(dd)" id="lat">
+						<input type="text" placeholder="Longitude(dd)" id="long">
+						<input type="text" placeholder="Radius(mi)" id="rad">
+					</form>
 				</div>
 
 			</div>
 
-			<div class='horizdivider'>
-			</div>
-			
-			<hr size="8" width="100%" color="black">  
+			<div class="section" id="step2">
 
-			<div class="outputanddoc">
+				<h2 id="titlestep2">Step 2: Estimate Type</h2>
 
-				<!-- Documentation -->
-				<div class="documentation">
-					Documentation and Examples
+				<div class="landtype">
+					<p id="landtypetext">Land Type</p>
+					<form id="landtypeform">
+						<input type="radio" id="allland">
+						<label for="allland">All land</label><br>
+						<input type="radio" id="forest">
+						<label for="forest">Forest land</label><br>
+						<input type="radio" id="allland">
+						<label for="timber">Timber land</label>
+					</form>
+				</div>	
+
+				<div class="estimationgroup">
+					<p id="grouptext">Estimation Type Group</p>
+					<form>
+						<select class="formcontrol" id="numlist" name="numlist" onclick="getNumerator()">
+							<option value="" disabled selected>Numerator</option>
+						</select>
+						<select class="formcontrol" id="denlist" name="denlist" onclick="getDenominator()">
+							<option value="" disabled selected>Denominator (for ratio estimates)</option>
+						</select>
+					</form>
 				</div>
 
 
-				<!-- Output Table -->
-				<div class="outputbox">
-					Output Table
-				</div>
+
+
+
+
 			</div>
 
-			<footer>
-			</footer>
-
+			<div class="section" id="step3">
+				<h2 id="titlestep3">Step 3: Table Variables</h2>
+			</div>
 		</div>	
+
+		<div class="outputcontainer"><!--Section for output and documetation-->
+
+			<div class="output" id="documentation">
+				<h3 id="titledoc">Documentation and Examples</h3>
+			</div>
+
+			<div class="output" id="tablebox">
+				<h3 id="titletable">Output Table</h3>
+			</div>
+		</div>
+
+		<div class="footer">
+		</div>
+
 
 	</body>
 
 </html>
-
