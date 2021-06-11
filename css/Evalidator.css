@@ -1,79 +1,220 @@
-body, html {
+body, html{
 	margin: auto;
 	padding: 0px;
 	background-color: white;
-	font-family: "Avenir Next";
+	font-family: 'Lato', sans-serif;
+	height: 750px;
+	min-width: 1000px;
 }
-
-.container {
-	max-width: 100%;
-	min-width: 600px;
-	margin: auto;
-
-}
-
-header {
+.header{
 	width: 100%;
 	height: 100px;
-	line-height: normal;
 	background-color: #267030;
+	position: relative;
+	white-space: nowrap;
+	vertical-align: center;
 }
-
-	header span {
-		color: white;
-		font-size: 25px;
-		padding-left: 50px;
-	}
-
-.steps {
-	max-width: 100%;
-	height: 75px;
-	background-color: #faf8df;
-	border-bottom: 1px solid black;
-}
-
-footer {
+.footer{
 	width: 100%;
 	height: 75px;
 	background-color: #267030;
+	position: relative;
 }
-
-.step1 {
-	width: 33%;
-	float: left;
+#headertitle{
+	color: white;
+	font-size: 50px;
+	position: absolute;
+	text-align: center;
+	line-height: 25px;
+	left: 100px;
+	font-weight: 300;
+}
+#USFSLogo{
+	position: absolute;
+	left: 15px ;
+	top:  10px;
+	max-width: 75px;
+	display: flex;
+	justify-content: center;
+}
+/* Section 1: Choices */
+.choicescontainer{
+	width: 100%;
 	height: 500px;
-	border-right:  1px solid black;
-
+	background-color: #faf8df;
+	min-width: 200px;
+	position: relative;
+	text-align: center;
+	border-bottom: 5px solid black;
+	display: flex;
+	display: -webkit-flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
 }
-
-.step2 {
+.section{
+	position: relative;
 	width: 33%;
-	float: left;
 	height: 500px;
-	border-right:  1px solid black;
+	border: 3px solid black;
+	/* padding-left: 10%;
+	padding-right: 10%; */
+	white-space: nowrap;
 }
 
-.step3 {
-	width: 33%;
-	float: left;
-	height: 500px;
+/*Step 1: Retrieval Type */
+.statechoice{
+	position: absolute;
+	top: 60px;
+	left: 30px;
+	height: 40px;
+}
+#statetext{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 18px;
+	color: black;
+	white-space: nowrap;
+}
+#statelist{
+	position: absolute;
+	top: 21px;
+	left: 130px;
+	width: 160px;
+}
+.timeframe{
+	position: absolute;
+	top: 100px;
+	left: 30px;
+	height: 50px;
+}
+#timeframetext{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 18px;
+	color: black;
+	white-space: nowrap;
+}
+#timeframeform{
+	position: absolute;
+	top: 43px;
+	left: 20px;
+	font-size: 16px;
+}
+label{
+	color: black;
+	position: absolute;
+}
+.geographicalchoice{
+	position: absolute;
+	top: 180px;
+	left: 30px;
+	width: 85%;
+	height: 100px;
+}
+#geographies{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 18px;
+}
+.geographicallist{
+	position: absolute;
+	width: 100%;
+	height: 150px;
+	top: 45px;
+	background-color: white;
+	border: 1px solid black;
+}
+.circlerequest{
+	position: absolute;
+	top: 400px;
+	left: 30px;
+	background-color: chocolate;
+	width: 85%;
+}
+#circletitle{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 18px;
+}
+#circleform{
+	position: absolute;
+	top: 50px;
+	left: 0px;
+	width: 50%;
+}
+/* Step 2: Estimate Type */
+
+.landtype{
+	position: absolute;
+	top: 60px;
+	left: 30px;
+	height: 40px;
+}
+#landtypetext{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	font-size: 18px;
+	color: black;
+	white-space: nowrap;
+}
+#landtypeform{
+	position: absolute;
+	top: 45px;
+	left: 15px;
+	font-size: 16px;
+}
+.estimationgroup{
+	position: absolute;
+	top: 60px;
+	left: 30px;
+	height: 40px;
+}
+#grouptext{
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	font-size: 18px;
+	color: black;
+	white-space: nowrap;
+}
+#numlist{
+	position: absolute;
+	top: 150px;
+	left: 15px;
+	width: 300px;
+}
+#denlist{
+	position: absolute;
+	top: 185px;
+	left: 15px;
+	width: 300px;
 }
 
-.outputanddoc {
+
+/* Section2: Output and documentation */
+.outputcontainer{
+	position: relative;
 	width: 100%;
 	height: 750px;
 	background-color: white;
+	border-top: 1px solid black;
+	min-width: 200px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-evenly;
+	text-align: center;
 }
-
-.documentation {
+#documentation{
 	width: 20%;
 	float:  left;
-	height: 750px;
 	border-right: 1px solid black;
 }
-
-.outputbox {
-	width: 79%;
+#tablebox{
+	width: 80%;
 	float: right;
-	height: 750px;
 }
