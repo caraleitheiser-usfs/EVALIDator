@@ -37,9 +37,9 @@
 					<p id="timeframetext">Inventory Time Frame</p>
 					<form id="timeframeform">
 						<input type="radio" id="limit">
-						<label for="limit">Limit</label><br>
+						<label for="limit">Limit retrieval to most recent inventories</label><br>
 						<input type="radio" id="alltime" >
-						<label for="alltime">All</label>
+						<label for="alltime">Show all available inventories</label>
 					</form>
 				</div>
 
@@ -88,16 +88,73 @@
 					</form>
 				</div>
 
+				<div class="estimatechoice">
+					<p id="estimatechoicetext">Estimate</p>
+					<form>
+						<select class="formcontrol" id="estimatelist" name="estimatelist" onclick="getEstimate() "></select>
+					</form>
+				</div>
 
-
-
-
-
+				<div class="landdefn">
+					<p id="landdefntext">Forest Land Definition</p>
+					<form id="landdefnform">
+						<input type="radio" id="FIA">
+						<label for="FIA">Use FIA (National) definition of forest land</label><br>
+						<input type="radio" id="RPA"/>
+						<label for="RPA"><a href="https://apps.fs.usda.gov/Evalidator/RPA_forest_filter.html">Use RPA (International) definition of forest land</a></label><br>
+					</form>
+				</div>
 			</div>
+
+			<!-- <a href="https://apps.fs.usda.gov/Evalidator/RPA_forest_filter.html" target="_blank"></a> -->
 
 			<div class="section" id="step3">
+
 				<h2 id="titlestep3">Step 3: Table Variables</h2>
+
+				<div class="pagevariable">
+					<p id="pagevariabletext">Page Variable</p>
+					<form>
+						<select class="formcontrol" id="pagelist" name="pagelist" onclick="getPageVariable() "></select>
+					</form>
+				</div>
+
+				<div class="rowvariable">
+					<p id="rowvariabletext">Row Variable</p>
+					<form>
+						<select class="formcontrol" id="rowlist" name="rowlist" onclick="getRowVariable() "></select>
+					</form>
+				</div>
+
+				<div class="columnvariable">
+					<p id="columnvariabletext">Column Variable</p>
+					<form>
+						<select class="formcontrol" id="columnlist" name="columnlist" onclick="getColumnVariable() "></select>
+					</form>
+				</div>
+
+				<div class="filters">
+					<p id="filterstext">Filters</p>
+					<form id="filtersform">
+						<input type="radio" id="results">
+						<label for="results">Show Results</label><br>
+						<input type="radio" id="addfilters">
+						<label for="addfilters">Add/Clear Filters</label><br>
+					</form>
+				</div>
+
+				<div class="samplingerrors">
+					<p id="samplingerrorstext">Sampling Errors</p>
+					<form id="samplingerrorsform">
+						<input type="radio" id="se">
+						<label for="se">Output and Sampling Errors</label><br>
+						<input type="radio" id="outputonly">
+						<label for="outputonlu">Output Only</label><br>
+					</form>
+				</div>
+
 			</div>
+
 		</div>	
 
 		<div class="outputcontainer"><!--Section for output and documetation-->
